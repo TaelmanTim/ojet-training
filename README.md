@@ -369,7 +369,11 @@ In this part, you create a reusable Web Component that follows the W3C Web Compo
 We'll start by creating a new Web Component, add properties, and express them as attributes in the view of a module, by means of a new custom element. Wouldn't it be great if you could express the form that you defined in step 5 above, as below instead? That's what you're going to learn about in this section.
 
 ```html #button { border: none; }
-<my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
+<my-employee-form first-name='[[inputFirstName]]' 
+                  last-name='[[inputLastName]]' 
+                  hire-date='[[inputHireDate]]' 
+                  hire-salary='[[inputSalary]]'>
+</my-employee-form>
 ```
 
 1. In the Terminal window, first kill the 'ojet' process, using Ctrl-C. This is because you will be adding new files in this section. Whenever you add new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then, after creating new files as in step 2 below, restart the 'ojet' process via 'ojet serve'. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
@@ -454,7 +458,11 @@ You can initialize the properties by using attributes with hyphens where the cam
 You can refer to properties in the module so that when a row is selected in the grid, the view is automatically updated:
 
 ```html #button { border: none; }
-<my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
+<my-employee-form first-name='[[inputFirstName]]' 
+                  last-name='[[inputLastName]]' 
+                  hire-date='[[inputHireDate]]' 
+                  hire-salary='[[inputSalary]]'>
+</my-employee-form>
 ```
 
 **Note:** Remember to run 'ojet serve' to serve the application, since you killed the 'ojet' process in step 1 of this section.
